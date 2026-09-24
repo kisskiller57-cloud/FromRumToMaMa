@@ -527,19 +527,10 @@
           return;
         }
 
-        // ===== SUBSEQUENT CLICKS =====
-        noClickCount++;
-        if (noClickCount >= MOBILE_TAP_LIMIT) {
-          noBtn.textContent = 'Okay fine… 🥲';
-          noBtn.style.background = 'linear-gradient(135deg, #b0b0b0, #808080)';
-          noBtn.style.pointerEvents = 'none';
-          noBtn.disabled = true;
-          result.textContent = 'Aww, okay… I respect that. 💔';
-          result.classList.add('sad');
-          result.classList.add('show');
-          counterEl.textContent = '';
-          return;
-        }
+        // ===== SUBSEQUENT CLICKS (No always runs away) =====
+noClickCount++;
+fleeFrom(cx, cy);
+counterEl.textContent = `"No" က ပြေးနေတယ်! ထပ်နှိပ်ကြည့်...`;
 
         fleeFrom(cx, cy);
 

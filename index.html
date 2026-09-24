@@ -530,13 +530,13 @@
         // ===== SUBSEQUENT CLICKS (No always runs away) =====
 noClickCount++;
 fleeFrom(cx, cy);
-counterEl.textContent = `"No" က ပြေးနေတယ်! ထပ်နှိပ်ကြည့်...`;
+counterEl.textContent = `"No" ဘဲနှိပ်မနေနဲ့လေ`;
 
         fleeFrom(cx, cy);
 
         const remaining = MOBILE_TAP_LIMIT - noClickCount;
         if (remaining > 0) {
-          counterEl.textContent = `"No" card အထဲမှာ ပြေးနေတယ်! (${remaining} tries left)`;
+          counterEl.textContent = `"No" နှိပ်ရက်တယ်ပေါ့! (${remaining} tries left)`;
         }
       }
 
